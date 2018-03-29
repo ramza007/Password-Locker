@@ -15,11 +15,11 @@ class TestCredentials(unittest.TestCase):
 
         self.new_credentials = Credentials("Google", "3344")
 
-    # def tearDown(self):
-    #     '''
-    #      tear down method that does clean up after each test case has run.
-    #     '''
-    #     Credentials.credentials_list = []
+    def tearDown(self):
+        '''
+         tear down method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
 
     def test_credentials_instance(self):
         '''
