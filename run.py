@@ -14,6 +14,12 @@ def create_new_credential(account_name, account_password):
     return new_credential
 
 
+def save_new_credential(credentials):
+    '''
+    method to save new credentials
+    '''
+
+    credentials.save_credentials()
 
 
 
