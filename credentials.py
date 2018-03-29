@@ -9,3 +9,10 @@ class Credentials:
         self.account_password = account_password
 
     credentials_list = []
+
+    def delete_credentials(self):
+        '''
+        method that deletes a credential
+        '''
+
+        Credentials.credentials_list.remove(self)
