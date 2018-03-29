@@ -5,7 +5,7 @@ from user import User
 class TestUser(unittest.TestCase):
 
     '''
-    Test class that defines test cases for the User class behaviors
+    test class for behaviours
 
 
     Args:
@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
 
     def setUp(self):
         '''
-        method to run before each test case
+        method run before each test case
         '''
 
         self.new_user = User("ramza", "password")
@@ -27,3 +27,8 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.user_name, "ramza")
         self.assertEqual(self.new_user.password, "password")
+
+    def test_save_user(self):
+        '''
+        test case to check if the user is able to save data
+        '''
