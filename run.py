@@ -3,7 +3,7 @@ import random
 from user import User
 from credentials import Credentials
 
-# functions to add our credentials
+# functions to add credentials
 
 
 def create_new_credential(account_name, account_password):
@@ -49,28 +49,63 @@ def delete_credential(credentials):
 def main():
 
     while True:
-        print("Welcome to password locker!!!")
+        print("*****  Welcome to password locker!!!  *****")
         print('\n')
-        print("Use these short codes to navigate - new user use 'nu' - login to your account, 'lg' - 'ex' to exit the system")
+        print("""Use these short codes to navigate: \n "nu"- add new user \n "lg"-login to your created account \n "ex"-to exit the system""")
         short_code = input().lower()
         print('\n')
 
         if short_code == 'nu':
-            print('create username')
+            print('-----------create username---------')
             created_user_name = input()
 
-            print('create password')
+            print('-----------create password---------')
             created_user_password = input()
 
-            print('confirm password')
+            print('----------confirm password---------')
             confirm_password = input()
+            print('\n')
 
             while confirm_password != created_user_password:
-                print("Invalid ! Password oes not match!")
+                print("Invalid Password !")
                 print("Try again")
                 created_user_password = input()
                 print("Confirm your password")
                 confirm_password = input()
+                print('\n')
+            else:
+                print(
+                    f"Hello {created_user_name}! You have successfully create your account! "
+                    )
+                print('\n')
+                print("****** Proceed to login *******")
+                print("-----------Username-----------")
+                entered_username = input()
+                print("-----------Your password-----------")
+                entered_password = input()
+
+            while entered_username != created_user_name or entered_password != created_user_password:
+                print('\n')
+                print("Invalid username or password")
+                print("-----------Username-----------")
+                entered_username = input()
+                print("-----------Your password-----------")
+                entered_password = input()
+
+            else:
+                print(f"welcome: {entered_username} to your account")
+                print('\n')
+
+                print("Select an option to continue: Enter 1, 2, 3, 4 or 5")
+                print('\n')
+
+            while True:
+                print("1:view your saved credentials")
+                print("2:Add new credentials")
+                print("3:Remove  credentials")
+                print("4:search new credentials")
+                print("5:log out")
+                option = input()
 
 
 
@@ -81,11 +116,6 @@ def main():
 
 
 
-
-
-
-
-                
 if __name__ == '__main__':
 
     main()
