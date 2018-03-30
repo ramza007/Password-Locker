@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import random
 from user import User
 from credentials import Credentials
