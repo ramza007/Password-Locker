@@ -62,7 +62,7 @@ def main():
             print('-----------create password---------')
             created_user_password = input()
 
-            print('----------confirm password---------')
+            print('-----------confirm password---------')
             confirm_password = input()
             print('\n')
 
@@ -79,6 +79,7 @@ def main():
                     )
                 print('\n')
                 print("****** Proceed to login *******")
+                print('\n')
                 print("-----------Username-----------")
                 entered_username = input()
                 print("-----------Your password-----------")
@@ -91,12 +92,14 @@ def main():
                 entered_username = input()
                 print("-----------Your password-----------")
                 entered_password = input()
-
-            else:
-                print(f"welcome: {entered_username} to your account")
                 print('\n')
 
-                print("Select an option to continue: Enter 1, 2, 3, 4 or 5")
+            else:
+                print('\n')
+                print(f"******* Welcome {entered_username} to your account *******")
+                print('\n')
+
+                print("Select an option to continue: \n Enter 1, 2, 3, 4 or 5")
                 print('\n')
 
             while True:
