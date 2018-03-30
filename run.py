@@ -55,8 +55,37 @@ def main():
         short_code = input().lower()
         print('\n')
 
+        if short_code == 'nu':
+            print('create username')
+            created_user_name = input()
+
+            print('create password')
+            created_user_password = input()
+
+            print('confirm password')
+            confirm_password = input()
+
+            while confirm_password != created_user_password:
+                print("Invalid ! Password oes not match!")
+                print("Try again")
+                created_user_password = input()
+                print("Confirm your password")
+                confirm_password = input()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                
 if __name__ == '__main__':
 
     main()
