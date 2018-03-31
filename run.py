@@ -49,7 +49,9 @@ def delete_credential(credentials):
 def main():
 
     while True:
-        print("*****  Welcome to password locker!!!  *****")
+        print(
+            "*****  Welcome to password locker!!!  *****"
+            )
         print('\n')
         print("""Use these short codes to navigate: \n "nu"- add new user \n "lg"-login to your created account \n "ex"-to exit the system""")
         short_code = input().lower()
@@ -67,10 +69,10 @@ def main():
             print('\n')
 
             while confirm_password != created_user_password:
-                print("Invalid Password !")
-                print("Try again")
+                print("-----------Invalid Password !-----------")
+                print("-----------Enter user name-----------")
                 created_user_password = input()
-                print("Confirm your password")
+                print("-----------Confirm your password-----------")
                 confirm_password = input()
                 print('\n')
             else:
@@ -110,6 +112,67 @@ def main():
                 print("5:log out")
                 option = input()
 
+                if option == '2':
+                    while True:
+                        print("Do you wish to continue to add? y/n")
+
+                        choice = input().lower()
+                        if choice == 'y':
+                            print("-----------Enter account name-----------")
+                            account_name = input()
+                            print('\n')
+                            print(
+                                "** I can create a password for if you type in - 'rp' \n** Or create your own password with - 'cp'")
+                            keyword = input().lower()
+
+                            #Generates the random digit number
+                            if keyword == 'rp':
+                                account_password = random.randint(
+                                    11111, 111111)
+                                print('\n')
+                                print('Automatically generated this for you')
+                                print(f" ******* Account: {account_name}  *******")
+                                print(f" ******* Password: {account_password}  *******")
+                                print('\n')
+                            elif keyword == 'cp':
+                                print("Create your own password password")
+                                account_password = input()
+                                print(f" *******Account: {account_name} *******")
+                                print(f" ******* Password: {account_password} *******")
+                                print('\n')
+
+                            else:
+                                print(" ****** Enter a valid code *****")
+
+                            # elif save_new_credential(create_new_credential(
+                            #     account_name, account_password))
+
+                        elif choice == 'cp':
+                            break
+                        else:
+                            print("use 'y' for yes and 'n' for no")
+
+                elif option == '1':
+                    while True:
+                        print("***** This is a list of your credentials *****")
+
+                        if display_credential():
+
+                            for credential in display_credential():
+                                print(
+                                    f"***** Account Name:{credential.account_name} *****")
+                                print(
+                                    f"***** Password:{credential.account_password}***** ")
+
+                        else:
+
+                            print('\n')
+                            print("-------No credentials available------")
+                            print('\n')
+
+                        print("Back to menu? y/n")
+
+                        back = input().lower()
 
 
 
