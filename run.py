@@ -47,10 +47,10 @@ def delete_credential(credentials):
 
 
 def main():
-
+    print('\n')
     while True:
         print(
-            "*****  Welcome to password locker!!!  *****"
+            "********************  Welcome to password locker!!! ********************"
             )
         print('\n')
         print("""Use these short codes to navigate: \n "nu"- add new user \n "lg"-login to your created account \n "ex"-to exit the system""")
@@ -186,11 +186,12 @@ def main():
 
                 elif option == '5':
                     print(
-                        "WARNING you will loose your details if you log out.Proceed? y/n")
+                        "WARNING all your details will be lost. \n Proceed? y/n")
                     logout = input().lower()
 
                     if logout == 'y':
                         print("-------- You have logged out successfully --------")
+                        print('\n')
                         break
                     elif logout == 'n':
                         continue
@@ -201,24 +202,24 @@ def main():
 
                         search_name = input()
 
-                        if check_existing_credentials(search_name):
-                            search_credential = find_credential(search_name)
-                            print(
-                                f"Account Name: {search_credential.account_name}\n Password: {search_credential.account_password}")
-                            print("Delete? y/n")
+                        # if check_existing_credentials(search_name):
+                        search_credential = find_credential(search_name)
+                        print(
+                            f"Account Name: {search_credential.account_name}\n Password: {search_credential.account_password}")
+                        print("Delete? y/n")
 
-                            confirm = input().lower()
-                            if confirm == 'y':
-                                delete_credential(search_credential)
-                                print("----- Account successfully removed -----")
-                                break
-                            elif confirm == 'n':
-                                continue
-
-                        else:
-                            print("----- Account does not exist -----")
+                        confirm = input().lower()
+                        if confirm == 'y':
+                            delete_credential(search_credential)
+                            print("----- Account successfully removed -----")
                             break
-                
+                        elif confirm == 'n':
+                            continue
+
+                    else:
+                        print("----- Account does not exist -----")
+                        break
+            
                 elif option == '4':
                     while True:
                         print("continue? y/n")
@@ -251,7 +252,14 @@ def main():
            default_user_name = input()
            print('\n')
 
+        while default_user_name != 'guest1' or default_user_password != '03903':
+            print(
+                "*** Wrong userName or password. Username 'guest1' and password '03903' ****")
+            print("----- Enter user name -----")
+            default_user_name = input()
 
+            print("----- Enter password -----")
+            default_user_password = input()
 
 
 if __name__ == '__main__':
