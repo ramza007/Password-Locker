@@ -1,5 +1,5 @@
 import unittest
-from credentials import Credentials 
+from credentials import Credentials
 
 
 class TestCredentials(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestCredentials(unittest.TestCase):
 
         self.new_credentials.save_credentials()  # save new user
         self.assertEqual(len(Credentials.credentials_list), 1)
-    
+
     def test_delete_credentials(self):
         '''
         test delete credentials to test if we can remove a account from our list
@@ -70,4 +70,4 @@ class TestCredentials(unittest.TestCase):
 
 
 if __name__ == '__main__':
-   unittest.main()
+    unittest.main()
