@@ -180,8 +180,6 @@ def main():
 
                         back = input().lower()
 
-                        back = input().lower()
-
                         if back == 'y':
                             break
                         elif back == 'n':
@@ -235,13 +233,13 @@ def main():
 
                             search_name = input()
 
-                            if check_existing_credentials(search_name):
-                                search_credential = find_credential(
-                                    search_name)
-                                print(
-                                    f"Account Name: {search_credential.account_name}\n Password: {search_credential.account_password}")
-                            else:
-                                print("---Sorry this account does not exist -----")
+                            # if check_existing_credentials(search_name):
+                            search_credential = find_credential(
+                                search_name)
+                            print(
+                                f"Account Name: {search_credential.account_name}\n Password: {search_credential.account_password}")
+                            # else:
+                            print("---Sorry this account does not exist -----")
 
                         elif choice == 'n':
                             break
@@ -265,14 +263,14 @@ def main():
             default_user_name = input()
             print('\n')
 
-        while default_user_name != 'guest1' or default_user_password != '03903':
-            print(
-                "*** Wrong userName or password. Username 'guest1' and password '03903' ****")
-            print("----- Enter user name -----")
-            default_user_name = input()
+        # while default_user_name != 'guest1' or default_user_password != '03903':
+        #     print(
+        #         "*** Wrong userName or password. Username 'guest1' and password '03903' ****")
+        #     print("----- Enter user name -----")
+        #     default_user_name = input()
 
-            print("----- Enter password -----")
-            default_user_password = input()
+        #     print("----- Enter password -----")
+        #     default_user_password = input()
 
 
 if __name__ == '__main__':
