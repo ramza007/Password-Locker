@@ -32,9 +32,9 @@ class TestUser(unittest.TestCase):
         '''
         test case to check if the user is able to save data
         '''
-        # This saves a new user 
+        # This saves a new user
         self.new_user.save_user()
-        self.assertEqual(len(User.user_list),1)
+        self.assertEqual(len(User.user_list), 1)
 
 
 if __name__ == '__main__':

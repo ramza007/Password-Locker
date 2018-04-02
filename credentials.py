@@ -28,12 +28,12 @@ class Credentials:
     def find_by_name(cls, account_name):
         '''
         a method that takes in a name and returns a credential that matches that name
-        
+
         Args:
             name: account_name that has a password
         return:
             the account that matches that name
-            
+
         '''
 
         for credentials in cls.credentials_list:

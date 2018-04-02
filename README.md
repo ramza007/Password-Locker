@@ -13,7 +13,7 @@ The project works responsively and has no errors during testing, stores your dat
 
 ---
 
-### this [link](https://github.com/ramza007/Password-Locker/) will take to my live site on Git Hub
+### This [link](https://github.com/ramza007/Password-Locker/) will take to my live site on Git Hub
 
 ---
 
