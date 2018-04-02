@@ -9,7 +9,7 @@ An application that allows users to generate and store passwords named credentia
 
 ## Documentation
 
-The project works responsively and has no errors during testing, stores your data and will display once the short call is called.
+The project works responsively and has no errors during testing, stores your data and will display once the short code is called.
 
 ---
 
