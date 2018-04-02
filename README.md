@@ -9,7 +9,8 @@ An application that allows users to generate and store passwords named credentia
 
 ## Documentation
 
-the project works responsively and has no errors during testing, stores your data and will display once the short call is called.
+The project works responsively and has no errors during testing, stores your data and will display once the short call is called.
+
 ---
 
 ### this [link](https://github.com/ramza007/Password-Locker/) will take to my live site on Git Hub
