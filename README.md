@@ -1,7 +1,7 @@
 # Password Locker
 
-
-### By **Ramza Reseni**, published on **31/04/18**
+### By **Ramza Reseni**, 
+#### Published date **31/03/18**
  ---
 ## Description
 
@@ -9,11 +9,11 @@ An application that allows users to generate and store passwords named credentia
 
 ## Documentation
 
-The project works responsively and has no errors during testing, stores your data and will display once the short code is called.
+The project works responsively and had no errors during testing, stores data and displays it with the help of short codes.
 
 ---
 
-### This [link](https://github.com/ramza007/Password-Locker/) will take to my live site on Git Hub
+#### This [link](https://github.com/ramza007/Password-Locker/) will take to my live site on Git Hub
 
 ---
 
