@@ -55,7 +55,7 @@ def main():
             "********************  Welcome to password locker!!! ********************"
         )
         print('\n')
-        print("""Use these short codes to navigate: \n "nu"- add new user \n "lg"-login to your created account \n "ex"-to exit the system""")
+        print("""\nUse these short codes to navigate: \n "nu"- add new user \n "lg"-login to your created account \n "ex"-to exit the system\n""")
         short_code = input().lower()
         print('\n')
 
@@ -88,8 +88,30 @@ def main():
             password = input()
 
             if username in users and users[username] == password:
-                print(f"Welcome {username}!")
-                # Add further logic for logged-in users here
+                print(f"\nWelcome {username}!")
+                while True:
+                    print("""Use these short codes to navigate: \n "cc"- create credential \n "dc"- display credentials \n "lo"- logout""")
+                    user_short_code = input().lower()
+                    if user_short_code == 'cc':
+                        print('-----------enter account name---------')
+                        account_name = input()
+                        print('-----------enter account password---------')
+                        account_password = input()
+                        new_credential = Credentials(account_name, account_password)
+                        new_credential.save_credentials()
+                        print(f"Credential for {account_name} created successfully!")
+                    elif user_short_code == 'dc':
+                        credentials = Credentials.display_credentials()
+                        if credentials:
+                            for credential in credentials:
+                                print(f"Account: {credential.account_name}, Password: {credential.account_password}")
+                        else:
+                            print("\n----------No credentials found.----------\n")
+                    elif user_short_code == 'lo':
+                        print("Logging out...")
+                        break
+                    else:
+                        print("Invalid short code. Please try again.")
             else:
                 print("Invalid username or password. Please try again.")
 
