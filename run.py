@@ -94,9 +94,9 @@ def main():
                             account_password = input()
                         elif password_option == 'g':
                             account_password = generate_password()
-                            print("----------")
+                            print("----------\n")
                             print(f"Generated password: {account_password}")
-                            print("----------")
+                            print("----------\n")
                         else:
                             print("Invalid option. Please try again.")
                             continue
@@ -109,7 +109,6 @@ def main():
                             for credential in credentials:
                                 print("----------")
                                 print(f"Account: {credential.account_name}, Password: {credential.account_password}")
-                                print("----------")
                         else:
                             print("\n----------No credentials found.----------\n")
                     elif user_short_code == 'lo':
