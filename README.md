@@ -1,6 +1,5 @@
 # Password Locker
 
-### By **Ramsa Ombati** 
 #### Published: 31/03/18
 #### Updated: 01/15/2025
 ## Description
